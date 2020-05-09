@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>MyTimekeeper</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>MtgTimekeeper</h1>
+      <!--タブ-->
+      <ul class="tab-group">
+        <li class="tab formTab activeTab">事前フォーム</li>
+        <li class="tab mtgTab">meeting</li>
+      </ul>
+    </header>
+    <div class="main">    <!--コンテンツ-->
+      <div class="contentGloup">
+        <div class="content activeContent">
+          <div class="form">
+            <div class="label">
+              <label >本日の議題　　：</label>
+            </div>
+            <textarea id ="title" name = "title" wrap="hard" placeholder="Agendaを入力"></textarea><br>
+          </div>
+          <div class="form">
+            <div class="label">
+              <label>本日のゴール　：</label>
+            </div>
+            <textarea id = "goal" name = "goal" wrap="hard" placeholder="決定したいことを入力"></textarea><br>
+          </div>
+          <div class="form">
+            <nobr class="setTime">
+              <label>予定時間　　：　</label>
+              <div class="setTime2">
+                <input type ="number" id = "mtgTime" name = "mtgTime" placeholder="半角数字">
+                分
+              </div>
+            </nobr>
+          </div>
+          <p class="formMessage">入力が終了したら<br>meetingタブをクリック！</p>
+        </div>
+
+        <div class="content">
+          <div id = "progress">
+            <progress id ="bar" value="100" max="100" min="0"></progress>
+          </div>
+          <p class="progressPercentage">進捗: 
+            <nobr value="0" id="time">0 ％</nobr>
+          </p>
+          <div class="countTimer">
+            <div id="counter">00：00：00</div>
+            <div class="btn">
+              <input id="start" name="start" type="button" value="▶︎">
+              <input id="reset"name="reset" type="button" value="Reset">
+            </div>
+          </div>
+          <div id = "out_mtgTime">予定時間： <span id="meetingTime">60</span><span> 分</span></div>
+          <h2 id="message"> ▶︎ でミーティング開始！</h2>
+          <div id = "out_title">本日の議題：</div>
+          <div id = "out_goal">ゴール：</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
