@@ -17,3 +17,6 @@ JavaScript学習のアウトプットとして、ミーティングタイマー�
 
 # ブラウザでアクセス
 [MyTimekeeper](https://protected-sierra-26081.herokuapp.com/)
+
+# Qiita
+[【JS】初めてのタイマーアプリ作成](https://qiita.com/manbolila/items/ce717c175b3310e1e932)
